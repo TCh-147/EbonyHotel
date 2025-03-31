@@ -1,0 +1,663 @@
+:root{
+    --dark-green : #272D2D;
+    --green: #8B9D83;
+    --white: #f3ece8;
+    --accent: #aa8fae;
+    --link-hover: #FFD700;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    background-color: var(--white);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    background-color: var(--dark-green);
+    color: var(--white);
+    margin: 0;
+    padding: 1.5rem;
+    overflow-wrap: break-word;
+}
+
+.hero-banner{
+    background-color: var(--dark-green);
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+}
+
+.banner-image{
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.banner-name{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 2;
+    top: 25%;
+}
+
+input[type="submit"]{
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 0.65em;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--accent);
+    cursor: pointer;
+}
+
+.standard-img{
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+
+
+/*****************************************************************************************
+*******************************  TOP MAIN MENU  ******************************************
+*****************************************************************************************/
+
+.top-menu{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-green);
+}
+
+.menu-list li a{
+    color: var(--white);
+    padding: 1rem 1.6rem;
+    font-size: 1.6em;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list li{
+    display: inline-block;
+}
+
+.menu-list li a:hover{
+    background-color: var(--green);
+}
+
+.menu-img{
+    max-width: 4.5vw;
+    height: auto;
+}
+
+
+/*****************************************************************************************
+************************************  INDEX PAGE  ****************************************
+*****************************************************************************************/
+
+
+/*********************************  Recent Posts ****************************************/
+
+.index-structure{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+.recent-posts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    background-color: var(--green);
+    padding: 1.5rem 0rem;
+}
+
+.post-title h4{
+    max-width: 240px;
+    overflow-wrap: break-word;
+}
+
+.post-title h4 a{
+    color: var(--dark-green);
+}
+
+.post-title h4 a:hover{
+    cursor: pointer;
+    color: var(--link-hover);
+}
+
+.post-thumbnail img{
+    max-width: 250px;
+    height: auto;
+    border: solid 2px var(--green);
+}
+
+.post-thumbnail img:hover{
+    cursor: pointer;
+    border-color: var(--link-hover);
+}
+
+/*********************************  Hotel Info ****************************************/
+
+.index-info{
+    padding: 4rem;
+    padding-top: 0;
+    text-align: justify;
+}
+
+/*****************************************************************************************
+******************************  ENTERTAINMENT PAGE   *************************************
+*****************************************************************************************/
+
+/**************************  Entertainment Posts Container ****************************/
+
+.ent-post-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    border-left: solid 4px var(--dark-green);
+    border-right: solid 4px var(--dark-green);
+}
+
+.ent-post{
+    max-width: 25vw;
+    background-color: var(--green);
+    padding:1rem ;
+    margin: 1rem;
+}
+
+.ent-thumbnail{
+    text-align: center;
+}
+
+.ent-thumbnail img{
+    max-width: 25vw;
+    height: auto;
+}
+
+.ent-title{
+    font-size: 26px;
+    text-align: center;
+}
+
+.ent-title h4{
+    display: inline-block;
+    padding: 0.2rem 1.5rem;
+    overflow-wrap: break-word;
+}
+
+
+.ent-summary{
+    font-size: 18px;
+    overflow-wrap: break-word;
+    color: var(--dark-green);
+}
+
+.ent-title h4 a{
+    color: var(--dark-green);
+}
+
+
+/*****************************************************************************************
+*******************************  SERVICE PAGE   ******************************************
+*****************************************************************************************/
+
+.spa-service p{
+    font-size: 18px;
+}
+
+.services-info{
+    margin: 0 auto;
+    width: 70vw;
+    text-align: justify;
+    padding: 2rem;
+}
+
+
+/*****************************************************************************************
+********************************  ROOMS PAGE   ******************************************
+*****************************************************************************************/
+
+.rooms-form{
+    display: block;
+    padding: 2rem;
+    background-color: var(--green);
+}
+
+.rooms-form label[for="room-type"]{
+    font-size: 20px;
+    padding: 0rem 0.5rem;
+}
+
+.rooms-form select[name="room-type"]{
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.2rem 0.8rem;
+    border-radius: 3px;
+}
+
+.rooms-form select[name="room-type"]:hover{
+    box-shadow: var(--green) 2px 2px 2px;
+}
+
+.rooms-container{
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-left: solid 4px var(--dark-green);
+    border-right: solid 4px var(--dark-green);
+    background-color: var(--green);
+}
+
+.rooms-post{
+    padding: 2rem;
+}
+
+.room-title h4{
+    text-align: center;
+}
+
+.room-title h4 a{
+    color: var(--dark-green);
+    font-size: 18px;
+}
+
+.room-thumbnail img{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    /* max-width: 500px;
+    height: auto; */
+    border: solid 2px var(--dark-green);
+    border-radius: 2px;
+}
+
+/*****************************************************************************************
+*******************************  CONTACT FORM   ******************************************
+*****************************************************************************************/
+
+
+
+.contact-info{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--green);
+    font-size: 18px;
+    text-align: justify;
+    /* border-bottom: solid 3px #9bb092; */
+}
+
+.contact-map iframe{
+    min-width: 40rem;
+    min-height: 20rem;
+    border: none;
+}
+
+
+.contacts-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--green);
+    font-size: 18px;
+}
+
+.contact-form-info{
+    padding: 2rem;
+}
+
+form.wpcf7-form.init input[type="submit"]{
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 0.65em;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 1rem;
+    margin: 0;
+}
+
+form.wpcf7-form.init input[type="submit"]:hover{
+    background-color: var(--accent);
+    cursor: pointer;
+}
+
+input[type="text"], input[type="email"]{
+    border-radius: 4px;
+    padding: 0.1em;
+    height: 2rem;
+}
+
+textarea{
+    border-radius: 4px;
+}
+
+
+/*****************************************************************************************
+************************************  SIDEBAR  *******************************************
+*****************************************************************************************/
+
+.sidebar-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.right-sidebar{
+    background-color: var(--green);
+    font-size: 18px;
+}
+
+.right-sidebar h2{
+    color: var(--dark-green);
+}
+
+.right-sidebar li{
+    padding: 0.25em;
+}
+
+.right-sidebar li a{
+    color: black;
+}
+
+.right-sidebar li a:hover{
+    color: var(--link-hover);
+}
+
+.right-sidebar ul{
+    list-style-type: none;
+}
+
+.right-sidebar ul[role="navigation"] li ul{
+    list-style-type: circle;
+}
+
+
+/*****************************************************************************************
+*********************************  SINGLE PAGE  ******************************************
+*****************************************************************************************/
+
+
+.single-container{
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.single-thumbnail{
+    text-align: center;
+}
+
+.single-thumbnail img{
+    max-width: 60vw;
+    height: auto;
+}
+
+.single-container p{
+    text-align: justify;
+}
+
+
+/*****************************************************************************************
+**************************************  FOOTER  ******************************************
+*****************************************************************************************/
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color: var(--dark-green);
+}
+
+.footer-container div{
+    padding: 2rem;
+    text-align: justify;
+    max-width: 22vw;
+}
+
+.footer-container div h3{
+    color: var(--accent);
+    font-size: 22px;
+    text-decoration: overline;
+}
+
+.footer-container div p{
+    color: var(--white);
+    font-size: 18px;
+    overflow-wrap: break-word;
+}
+
+.footer-link{
+    color: var(--accent);
+}
+
+.footer-link:hover{
+    cursor: pointer;
+    color: var(--link-hover);
+}
+
+#footer-endnote{
+    padding: 0;
+    margin-top: 2rem;
+    max-width: 100vw;
+    font-size: 14px;
+    align-self: end;
+}
+
+#footer-endnote p{
+    color: var(--accent);
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    text-emphasis: open;
+}
+
+.icons{
+    vertical-align: middle;
+    max-width: 2vw;
+    height: auto;
+    padding-right: 0.5rem;
+}
+
+
+/*****************************************************************************************
+***************************************  LINKS  ******************************************
+*****************************************************************************************/
+
+.ent-recent-link{
+    color: var(--dark-green);
+}
+
+.ent-recent-link:hover{
+    color: var(--link-hover);
+}
+
+.ent-link{
+    color: var(--dark-green);
+}
+
+.ent-link:hover{
+    color: var(--link-hover);
+}
+
+.room-link{
+    color: var(--dark-green);
+}
+
+.room-link:hover{
+    color: var(--link-hover);
+}
+
+
+/*****************************************************************************************
+***********************************  MEDIA QUERIES  **************************************
+*****************************************************************************************/
+
+
+@media (max-width: 1100px){
+/*************************************  Sidebar ******************************************/
+
+    .right-sidebar{
+        display: none;
+    }
+
+/*********************************  Contacts page  ***************************************/
+
+    .contact-info{
+        grid-template-columns: auto;
+    }
+    
+    .contacts-form{
+        grid-template-columns: auto;
+    }
+    
+    .contact-map iframe{
+        min-width: 80vw;
+    }
+}
+
+@media (max-width: 900px){
+
+    .index-info{
+        padding: 0;
+        padding-bottom: 8rem;
+    }
+
+    /***********************************  Main Menu ****************************************/
+
+    .menu-img{
+        align-self: center;
+        justify-self: center;
+    }
+
+    .top-menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-list li{
+        display: inline;
+        text-align: center;
+    }
+
+    .menu-list li a{
+        display: block;
+        padding: 0;
+        padding: 1rem 1.6rem;
+        min-width: 80vw;
+    }
+
+    .menu-list:first-child{
+        margin-top: 0;
+    }
+    
+    .menu-list:last-child{
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (max-width: 790px) {
+
+
+
+/*********************************  Recent Posts ****************************************/
+
+    .recent-posts{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-title h4{
+        display: inline;
+    }
+
+    .post{
+        margin-bottom: 2rem;
+    }
+
+    .rooms-container{
+        margin: 0;
+        border: none;
+    }
+
+
+/**********************************  Entertainment Page  ********************************/
+
+.ent-post-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.ent-post{
+    max-width: 80vw;
+}
+
+.ent-thumbnail img{
+    max-width: 70vw;
+}
+
+
+
+
+
+
+/*************************************  Footer ******************************************/
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container div{
+        max-width: 40vw;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .icons{
+        max-width: 3vw;
+    }
+
+}
